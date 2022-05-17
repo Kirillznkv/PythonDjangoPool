@@ -1,3 +1,4 @@
 #!/bin/bash
-curl -I $1 2> err.txt | grep "Location:" | cut -d ' ' -f 2
-rm err.txt
+if [ $1 ]; then
+curl -s $1 | grep "href=" | cut -f 2 -d \"
+fi
