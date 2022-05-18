@@ -3,8 +3,7 @@ def printIntFromFile(fileName):
         fstr = f.read()
     numbers = fstr.split(',')
     for num in numbers:
-        if num != "":
-            print(num)
+        print(num.strip())
 
 
 if __name__ == '__main__':
